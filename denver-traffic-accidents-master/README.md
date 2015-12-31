@@ -6,4 +6,12 @@ This project breaks-down the car accident data for the Captiol Hill neighborhood
 
 #### Run locally
 
-This project goes through the data on traffic accidents provided by the City and County of Denver to figure out which cross-streets in Denver have the highest number of accidents.
+```
+1. Fork and clone repo
+2. cd into the repo
+3. node accidents.js
+4. To make your own adjustments, edit the accidents.js file
+```
+
+#### To Do:
+- Break down the most dangerous locations for pedestrians
