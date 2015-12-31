@@ -1,0 +1,23 @@
+{
+  "name": "data-algorithms",
+  "version": "0.0.1",
+  "description": "work with algorithms data sturctures ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexG53090/Data-Structures-and-Algorithms.git"
+  },
+  "keywords": [
+    "data",
+    "algorithm"
+  ],
+  "author": "Alex Bennett <alexandergraybennett@gmail.com> (http://thedope.agency)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexG53090/Data-Structures-and-Algorithms/issues"
+  },
+  "homepage": "https://github.com/alexG53090/Data-Structures-and-Algorithms#readme"
+}
