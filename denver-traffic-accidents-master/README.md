@@ -14,4 +14,4 @@ This project breaks-down the car accident data for the Captiol Hill neighborhood
 ```
 
 #### To Do:
-- Break down the most dangerous locations for pedestrians
+- Deduce the most dangerous locations for pedestrians
