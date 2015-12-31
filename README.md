@@ -1,5 +1,5 @@
 # Data-Structures-and-Algorithms
-This is a my data playgorund, where one can run free with information and **wild** with analysis.
+This is my data playgorund, where one can run free with information and **wild** with analysis.
 
 ## List of Projects:
 
