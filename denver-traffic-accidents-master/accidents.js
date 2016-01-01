@@ -63,7 +63,21 @@ function street(array){
   var grant = "GRANT";
   var streets = [];
 
+  var colfaxCrash = [];
+  var grantCrash = [];
+  var loganCrash = [];
+  var downingCrash = [];
+  var otherCrashes = [];
+  var washingtonCrash = [];
 
+  var emersonCrash = [];
+  var eigthCrash = [];
+  var twelthCrash = [];
+  var coronaCrash = [];
+  var broadwayCrash = [];
+  var eleventhCrash = [];
+  var lincolnCrash = [];
+  var clarksonCrash = [];
 
   for(i = 0; i < array.length; i = i + 1){
     if('INCIDENT_ADDRESS' in array[i]){
@@ -73,52 +87,67 @@ function street(array){
       var grant = accident.indexOf('GRANT');
       var colfax = accident.indexOf('COLFAX')
       var logan = accident.indexOf("LOGAN");
+      var downing = accident.indexOf('DOWNING');
+      var washington = accident.indexOf('WASHINGTON');
+      var emerson = accident.indexOf('EMERSON');
+      var eigth = accident.indexOf('8TH');
+      var twelth = accident.indexOf('12TH');
+      var corona = accident.indexOf('CORONA');
+      var broadway = accident.indexOf('BROADWAY');
+      var eleventh = accident.indexOf('11TH');
+      var lincoln = accident.indexOf('LINCOLN');
+      var clarkson = accident.indexOf('CLARKSON');
 
-      var colfaxCrash = [];
-      var grantCrash = [];
-      var loganCrash = [];
-
-      var colfaxCounter = 0;
-
-      if(colfax != -1){
-        colfaxCounter = colfaxCounter + 1;
+      if(emerson != -1){
+        emersonCrash.push(accident)
+      } if(eigth != -1){
+        eigthCrash.push(accident)
+      } if(twelth != -1){
+        twelthCrash.push(accident)
+      } if(corona != -1){
+        coronaCrash.push(accident)
+      } if(broadway != -1){
+        broadwayCrash.push(accident)
+      } if(eleventh != -1){
+        eleventhCrash.push(accident)
+      } if(lincoln != -1){
+        lincolnCrash.push(accident)
+      } if(clarkson != -1){
+        clarksonCrash.push(accident)
+      } if (washington != -1){
+        washingtonCrash.push(accident);
+      } if (colfax != -1){
         colfaxCrash.push(accident);
-        console.log('this is colfax!!')
-      }if(grant != -1){
+      } if (grant != -1){
         grantCrash.push(accident)
-        console.log('this is GRANT')
-      } if(logan != -1){
-        console.log('LOGAN STREET')
+      } if (logan != -1){
+        loganCrash.push(accident)
+      } if (downing != -1){
+        downingCrash.push(accident);
       } else {
-        console.log('some other street')
+        otherCrashes.push(accident);
       }
     }
   }
-console.log(colfaxCounter, colfaxCrash.length, grantCrash.length)
 
-  // array.forEach(function(item, index, array){
-  //   if('GRANT' in ){
-  //     console.log('woa')
-  //   }
-  //   var position = item;
-  //   // console.log(position)
-  // })
-  // console.log(streets)
-
+  console.log("Accidents by street" + "\n" + "_______________________" + "\n" +
+    "Colfax: " + "\n" + colfaxCrash.length + "\n" +
+    "Grant:" + "\n" +  grantCrash.length + "\n" +
+    "Logan:" + "\n" +  loganCrash.length + "\n" +
+    "washington:" + "\n" + washingtonCrash.length + "\n" +
+    "Logan:" + "\n" +  loganCrash.length + "\n" +
+    "Ememerson:" + "\n" +  emersonCrash.length + "\n" +
+    "Eigth:" + "\n" +  eigthCrash.length + "\n" +
+    "Twelth:" + "\n" +  twelthCrash.length + "\n" +
+    "Corona:" + "\n" +  coronaCrash.length + "\n" +
+    "Lincoln:" + "\n" +  lincolnCrash.length + "\n" +
+    "Clarkson:" + "\n" +  clarksonCrash.length + "\n" +
+    "Downing:" + "\n" +  downingCrash.length + "\n" +
+    "Eleventh:" + "\n" +  eleventhCrash.length + "\n" +
+    "Broadway:" + "\n" +  broadwayCrash.length
+  )
 }
 
-
-
-
-//
-// var str = "Hello World";// For example, lets search this string,
-// var term = "World";// for the term "World",
-// var index = str.indexOf(term);// and get its index.
-// if(index != -1){// If the index is not -1 then the term was matched in the string,
-// alert(index);// and we can do some work based on that logic. (6 is alerted)
-// }
-
-//
 // iterateOverData(caphill, cardata);
 // iterateOverData(centralbiz, cbd);
 street(cardata);
