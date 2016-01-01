@@ -1,6 +1,8 @@
 var data = require('./data');
 var cardata = require('./cardata');
-function iterateOverData(array){
+var cbd = require('./cbd');
+
+function iterateOverData(name, array){
   var newArray = []
   for(i = 0; i < array.length; i = i + 1){
     var crime = array[i];
@@ -22,13 +24,13 @@ function iterateOverData(array){
       if(newArray[j].FIRST_OCCURRENCE_DATE){
         var time = newArray[j].FIRST_OCCURRENCE_DATE.substring(8);
         TOD.push(time);
-        for(k = 0; k < TOD.length; k = k + 1){
-          var instant = TOD[k].split(':').join('')
-          var instantNum = parseInt(instant);
-          console.log(instantNum)
-          totalTime = totalTime + instantNum;
-        }
-        var avg = totalTime / TOD.length;
+        // for(k = 0; k < TOD.length; k = k + 1){
+        //   var instant = TOD[k].split(':').join('')
+        //   var instantNum = parseInt(instant);
+        //   // console.log(instantNum)
+        //   totalTime = totalTime + instantNum;
+        // }
+        // var avg = totalTime / TOD.length;
       }
     } if (newArray[j].OFFENSE_TYPE_ID === "traffic-accident-hit-and-run"){
       hitAndRunCounter =  hitAndRunCounter + 1;
@@ -40,7 +42,21 @@ function iterateOverData(array){
       assaults.push(assault);
     }
   }
-  console.log(avg)
-  console.log("Total numbers: " + "DUI: " + duis.length + " Hit and Run: " + hitAndRun.length + " Assaults: " + assaults.length)
+  // console.log(avg)
+
+  console.log("\n" + name + "\n" + "______________________________" + "\n \n" +  "DUI: " + duis.length +   "\n" +  "Hit and Run: " + hitAndRun.length +  "\n" +  "Assaults: " + assaults.length + "\n" + "~~~~~~~~~~~~ END ~~~~~~~~~~~~~~")
 }
-iterateOverData(cardata);
+//
+// function mostDangerousStreet(array){
+//   for(INCIDENT_ADDRESS in array){
+//     if('Logan' in array[INCIDENT_ADDRESS]) {
+//       consoel.log(logan)
+//     }
+//   }
+// }
+
+var caphill = "Capotiol Hill";
+var centralbiz = "Central Business District"
+iterateOverData(caphill, cardata);
+iterateOverData(centralbiz, cbd);
+// mostDangerousStreet(cardata);
