@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src='client.js'></script>
+    <link rel='stylesheet' href='style.css'/>
+
+    <link href="https://rawgit.com/masayuki0812/c3/master/c3.css" rel="stylesheet" type="text/css">
+
+    <!-- Load d3.js and c3.js -->
+    <script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+    <script src="https://rawgit.com/masayuki0812/c3/master/c3.js"></script>
+
+
+  </head>
+  <body>
+    <div class="chart"></div>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+
+
+    <div id="chart"></div>
+    <script>
+      var chart = c3.generate({
+          data: {
+              // iris data from R
+              columns: [
+                  ['Small & Medium', broadwayCrash.length],
+                  ['Personal', lincolnCrash.length],
+                  ['Enterprise', emersonCrash.length],
+                  ['Any', 424],
+              ],
+              type : 'pie',
+              onclick: function (d, i) { console.log("onclick", d, i); },
+              onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+              onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+          }
+      });
+    </script>
+  </body>
+</html>

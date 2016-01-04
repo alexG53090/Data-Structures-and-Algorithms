@@ -129,7 +129,6 @@ function street(array){
       }
     }
   }
-
   console.log("Accidents by street" + "\n" + "_______________________" + "\n" +
     "Colfax: " + "\n" + colfaxCrash.length + "\n" +
     "Grant:" + "\n" +  grantCrash.length + "\n" +

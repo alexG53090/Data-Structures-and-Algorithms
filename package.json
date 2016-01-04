@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/alexG53090/Data-Structures-and-Algorithms/issues"
   },
-  "homepage": "https://github.com/alexG53090/Data-Structures-and-Algorithms#readme"
+  "homepage": "https://github.com/alexG53090/Data-Structures-and-Algorithms#readme",
+  "dependencies": {
+    "c3": "^0.4.11-rc4"
+  }
 }
